@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button">← Back</button>
+
+        <div class="reviews-header">
+            <h2>Reviews</h2>
+            <div class="rating-summary">
+                <div class="overall-rating">
+                    <span class="rating-value">4.4 ★</span>
+                    <span class="total-ratings">1072 Ratings</span>
+                    <span class="total-reviews">403 Reviews</span>
+                </div>
+                <div class="rating-breakdown">
+                    <div><span>5 ★</span>
+                        <div class="bar">
+                            <div class="filled-bar" style="width: 60%;"></div>
+                        </div> <span>300</span>
+                    </div>
+                    <div><span>4 ★</span>
+                        <div class="bar">
+                            <div class="filled-bar" style="width: 40%;"></div>
+                        </div> <span>160</span>
+                    </div>
+                    <div><span>3 ★</span>
+                        <div class="bar">
+                            <div class="filled-bar" style="width: 20%;"></div>
+                        </div> <span>80</span>
+                    </div>
+                    <div><span>2 ★</span>
+                        <div class="bar">
+                            <div class="filled-bar" style="width: 10%;"></div>
+                        </div> <span>35</span>
+                    </div>
+                    <div><span>1 ★</span>
+                        <div class="bar">
+                            <div class="filled-bar" style="width: 3%;"></div>
+                        </div> <span>8</span>
+                    </div>
+                </div>
+                <button class="review-button" onclick="toggleReviewForm()">Write a product review</button>
+            </div>
+        </div>
+        <div class="review-form" id="reviewForm">
+            <h3>Write a Review</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="date" placeholder="Review Date" required>
+            <textarea placeholder="Write your review here..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </div>
+
+        <div class="sort-options">
+            <button>Positive first</button>
+            <button>Negative first</button>
+            <button>Average rated</button>
+        </div>
+
+        <div class="review-images">
+            <div class="image-box"></div>
+            <div class="image-box"></div>
+            <div class="image-box"></div>
+            <div class="image-box more-images">+18</div>
+        </div>
+
+        <div class="review-list">
+            <div class="review">
+                <div class="reviewer-info">
+                    <h3>Andrew Garfield</h3>
+                    <div class="review-date">2 years ago • 18/07/2022</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-content">
+                    <img src="F:\Hanuven\review-page-sample\images\roberta-sorge-uOBApnN_K7w-unsplash.jpg"
+                        alt="Product Image">
+                    <p>This Vinyl Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewer-info">
+                    <h3>Tobey Maguire</h3>
+                    <div class="review-date">1 year ago • 08/07/2023</div>
+                </div>
+                <div class="review-stars">★★★★☆</div>
+                <div class="review-content">
+                    <img src="F:\Hanuven\review-page-sample\images\roberta-sorge-uOBApnN_K7w-unsplash.jpg"
+                        alt="Product Image">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua...</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewer-info">
+                    <h3>Tom Holland</h3>
+                    <div class="review-date">1 month ago • 15/07/2024</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-content">
+                    <img src="F:\Hanuven\review-page-sample\images\roberta-sorge-uOBApnN_K7w-unsplash.jpg"
+                        alt="Product Image">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua...</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="load-more-button">+ Load more reviews</button>
+    </div>
+
+    <script>
+        function toggleReviewForm() {
+            var form = document.getElementById('reviewForm');
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
